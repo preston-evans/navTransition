@@ -1,0 +1,54 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
+.zombie {
+  min-height: 200px;
+  min-width: 200px;
+  background-color: black;
+  border: 1px solid white;
+}
+.goo {
+  background-color: cadetblue;
+  height: 200px;
+  width: 200px;
+  border: 1px solid white;
+  align-self: flex-start;
+}
+
+.goo:last-child {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+button {
+  padding: 30px;
+  background-color: gray;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  outline: none;
+  position: relative;
+}
+.drop {
+  border-top: thin solid white;
+  padding: 30px;
+  display: none;
+  background-color: pink;
+}

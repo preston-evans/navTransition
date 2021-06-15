@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: ID changer</title>
+        <style>
+            * {
+                margin: 0;
+            }
+            .nav {
+                display: flex;
+                justify-content: space-between;
+                background-color: navy;
+                transition: 1s ease-in-out;
+            }
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: white;
+                padding: 20px;
+            }
+            .nav a:first-child {
+                margin-left: 80px;
+            }
+            .nav a:last-child {
+                margin-right: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <div>
+                <a href="#">Home</a>
+
+            </div>
+            <div>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <script>
+            const nav = document.querySelector('.nav')
+            const a = document.querySelectorAll('.nav a')
+            nav.addEventListener('mouseover', function() {
+                nav.style.backgroundColor = 'white'
+                for(link of a) {
+                    link.style.color = 'navy'
+                    link.style.borderLeft = 'thin solid navy'
+                }
+                nav.style.borderBottom = '1px solid navy'
+            })
+            nav.addEventListener('mouseout', function() {
+                nav.style.backgroundColor = 'navy'
+                for(link of a) {
+                    link.style.color = 'white'
+                }
+            })
+            a.addEventListener('mouseover', function() {
+                a.style.color = 'red'
+            })
+        </script>
+    </body>
+</html>
